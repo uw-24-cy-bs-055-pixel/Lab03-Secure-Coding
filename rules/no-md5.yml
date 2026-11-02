@@ -1,0 +1,7 @@
+rules:
+  - id: no-md5-for-passwords
+    languages: [python]
+    severity: ERROR
+    message: MD5 is too weak for passwords. Use generate_password_hash or bcrypt.
+    pattern: hashlib.md5(...)
+
